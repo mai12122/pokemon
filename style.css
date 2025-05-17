@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Shippori+Antique&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f3e8ff, #e0c3fc);
+    min-height: 100vh;
+}
+
+.container {
+    width: 360px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#card {
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+#card img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 20px auto;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+.hp {
+    width: 90px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 50px;
+    margin-left: auto;
+    font-weight: 500;
+    color: #111;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.poke-name {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 30px 0;
+}
+
+.types span {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    animation: fadeIn 0.6s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-transform: capitalize;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.stats div {
+    flex: 1;
+    padding: 10px;
+}
+
+.stats h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.stats p {
+    font-size: 13px;
+    color: #555;
+}
+
+#btn {
+    display: block;
+    padding: 14px 60px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: #fff;
+    font-weight: 600;
+    margin: 40px auto 0;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6c3483, #2471a3);
+}
